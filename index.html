@@ -17,21 +17,23 @@
       <a href="index.html">The Sock Store</a>
       
       <ul class="topbar-icons">
-        <li><a href="#"><span class="fas fa-user-circle"></span></a></li>
-        <li><a href="#"><span class="fas fa-shopping-cart"></span></a></li>
+        <li><a href="#" aria-label="user profile"><span class="fas fa-user-circle"></span></a></li>
+        <li><a href="#" aria-label="shopping cart"><span class="fas fa-shopping-cart"></span></a></li>
       </ul>
       <!-- Navigation menu and toggle button (non-functional) -->
       <nav class="main-menu" aria-label="Primary">
-          <input type="checkbox" id="toggle" aria-label="toggle menu open and close">
+          <input type="checkbox" id="toggle" aria-label="menu toggle">
           <label for="toggle" id="toggle-open"><span class="fas fa-bars"></span></label>
           <label for="toggle" id="toggle-close"><span class="fas fa-times"></span></label>
-        <ul class="main-menu-items">
-          <li><a href="#">Men</a></li>
-          <li><a href="#">Women</a></li>
-          <li><a href="#">Kids</a></li>
-          <li><a href="#">Collection</a></li>
-          <li><a href="#">Sale</a></li>
-        </ul>
+          <div>
+            <ul class="main-menu-items">
+              <li><a href="#">Men</a></li>
+              <li><a href="#">Women</a></li>
+              <li><a href="#">Kids</a></li>
+              <li><a href="#">Collection</a></li>
+              <li><a href="#">Sale</a></li>
+            </ul>
+          </div>
       </nav>
 
       <!-- Search for a product (non-functional) -->
@@ -121,37 +123,30 @@
         <!-- <fieldset id="products"> -->
 
         <!-- Product 1 -->
-        <article id="product0" class="product">
-          <header id="prodImage" class="prodimage-container">
+        <article id="product" class="product">
+          We have literally nothing to sell.
+          <!-- <header id="prodImage" class="prodimage-container">
             <img src="img/product.jpg" alt="Product Image" class="product-image">
             <button class="fave-button" type="button">
-              <!-- <span class="fas fa-heart"></span></button> -->
               <span class="far fa-heart"></span>
-              <!-- <span class="fas fa-circle"></span></button> -->
             </button>
             <p class="sale-tag">sale</p>
           </header>
           <h3 id="prodName" class="product-name">Product Name</h3>
-          <data id="prodPrice" class="product-price" value="39"><del>$50.00</del> <ins>$39.00</ins></data>
+          <data class="product-price" value="39"><del id="prodOriginalPrice">$50.00</del> <ins id="prodNewPrice">$39.00</ins></data>
           <p id="prodDescrip">Here is a shot of this product that might entice a user to click and add it to their cart.</p>
           <ul>
-            <li><strong>Material: </strong>Cotton</li>
-            <li><strong>Availability: </strong>In stock</li>
+            <li id="prodMaterial"><strong>Material: </strong>Cotton</li>
+            <li id="prodAvailability"><strong>Availability: </strong>In stock</li>
           </ul>
           <form>
             <fieldset id="prodSize" class="product-size">
-              <!-- <legend>Sizes</legend> -->
               <input type="radio" id="s" name="size" value="s"><label for="s">S</label>
               <input type="radio" id="m" name="size" value="m"><label for="m">M</label>
               <input type="radio" id="l" name="size" value="l"><label for="l">L</label>
-              <!-- <ol>
-                <li><label><input type="radio" name="size" value="s"> <span>S</span></label></li>
-                <li><label><input type="radio" name="size" value="m"> <span>M</span></label></li>
-                <li><label><input type="radio" name="size" value="l"> <span>L</span></label></li>
-              </ol> -->
             </fieldset>
 
-            <div class="quantity-bar">
+            <div id="quantityBar" class="quantity-bar">
                 <input class="quantity-button" type="button" name="decrease" value="-"> 
                 <input class="quantity-input" type="number" name="number" value="1">
                 <input class="quantity-button" type="button" name="increase" value="+"> 
@@ -159,10 +154,8 @@
 
             <footer class="product-cart">
               <button type="button">Add to Cart</button>
-              <!-- <button type="button"><span class="material-icons">add_shopping_cart</span> Add to Cart</button> -->
-              <!-- <a href="#">see more</a> -->
             </footer>
-          </form>
+          </form> -->
         </article>
 
         <!-- Product 2 -->
@@ -222,10 +215,10 @@
         </div>
         <div class="bottom-footer">
           <ul class="social-media">
-            <li class="facebook-icon"><a href="#"><span class="fab fa-facebook-f"></span></a></li>
-            <li class="instagram-icon"><a href="#"><span class="fab fa-instagram"></span></a></li>
-            <li class="twitter-icon"><a href="#"><span class="fab fa-twitter"></span></a></li>
-            <li class="youtube-icon"><a href="#"><span class="fab fa-youtube"></span></a></li>
+            <li class="facebook-icon"><a href="#" aria-label="Facebook"><span class="fab fa-facebook-f"></span></a></li>
+            <li class="instagram-icon"><a href="#" aria-label="Instagram"><span class="fab fa-instagram"></span></a></li>
+            <li class="twitter-icon"><a href="#" aria-label="Twitter"><span class="fab fa-twitter"></span></a></li>
+            <li class="youtube-icon"><a href="#" aria-label="Youtube"><span class="fab fa-youtube"></span></a></li>
           </ul>
           <p class="copyright">&copy; Copyright, 2019.</p>
         </div>
