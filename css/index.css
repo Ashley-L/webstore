@@ -1,0 +1,425 @@
+@import url('https://fonts.googleapis.com/css?family=Oswald:400,500,600,700&display=swap');
+@import url('https://fonts.googleapis.com/css?family=Open+Sans:400,600,700&display=swap');
+
+:root {
+   
+    --background: #ffffff;
+    --primary: #1b1b1b;
+    --secondary: rgb(112, 112, 112);
+
+
+    --heading: 'Oswald', sans-serif;
+    --body: 'Open Sans', sans-serif;
+
+}
+
+.topbar {
+    background-color: var(--primary);
+    padding: 1em;
+    /* position: fixed; */
+    /* z-index: 9000; */
+    width: 100%;
+    display: grid;
+    grid-template-columns: 4fr auto 1rem;
+    grid-template-areas:
+    "logo ico menu"
+    "search search search";
+    column-gap: 1.5em;
+    row-gap: .5em;
+}
+.topbar span {
+    font-size: 1.2em;
+}
+.topbar-icons {
+    grid-area: ico;
+    align-self: center;
+    display: grid;
+    grid-template-columns: 1fr 1fr; 
+    grid-gap: 1.5em;
+}
+.topbar-icons a {
+    align-items: center; 
+}
+.topbar-icons li {
+    display: inline-block;
+    justify-self: center; 
+}
+.topbar-icons span, .main-menu span, .search-bar span {
+    color: var(--background);
+}
+.main-menu {
+    grid-area: menu;
+    position: relative;
+    align-self: center; 
+    justify-self: end;
+}
+.search-bar {
+    grid-area: search;
+    justify-content: end; 
+}
+.topbar > a {
+    color: var(--background);
+    font-family: var(--heading);
+    font-size: 1.2em;
+    font-weight: 700;
+    text-decoration: none;
+    align-self: center;
+}
+
+/*Main menu CLEAN THIS UP OH MAN*/ 
+
+#toggle-open, #toggle-close {
+    position: relative;
+    z-index: 9999;
+}
+.main-menu input[type=checkbox] {
+    display: none;
+}
+.main-menu #toggle-close {
+    display: none;
+}
+.main-menu input[type=checkbox]:checked ~ #toggle-open {
+    display:none;
+}
+.main-menu input[type=checkbox]:checked ~ #toggle-close {
+    display:block;
+}
+.main-menu input[type=checkbox]:checked ~ ul {
+    display: block;
+}
+
+.main-menu-items {
+    background-color: var(--secondary);
+    position: absolute; 
+    z-index: 9999;
+    display: none;
+    padding: 0;
+    /* top: 0; */
+    right: 0;
+    width: 90vw;
+    height: 100vh;
+    overflow: hidden;
+}
+.main-menu-items a {
+    color: var(--background);
+    font-family: var(--heading);
+    text-decoration: none;
+}
+
+/* #toggle-open, #toggle-close {
+	position: absolute;
+	z-index: 9999;
+}
+input[type=checkbox], #toggle-close, input[type=checkbox] ~ ul,  input[type=checkbox]:checked ~ #toggle-open {
+	display: none;
+}
+input[type=checkbox]:checked ~ ul, input[type=checkbox]:checked ~ #toggle-close {
+	display: block;
+} */
+
+/*Search bar*/
+.bar {
+    width: 100%;
+    position: relative;
+    display: flex;
+    padding: 0;
+    align-items: center; 
+    justify-content: center;
+}
+.bar input {
+    font-family: var(--body);
+    border: none;
+    height: 1.5em;
+    text-indent: .5rem;
+}
+.bar button {
+    background-color: var(--secondary);
+    height: 1.5em;
+    position: relative;
+    text-align: center; 
+    padding: 0 1em;
+    /* align-self: center;  */
+
+    /* padding: 0 .5em .5em 0; */
+    /* position: absolute; */
+    /* z-index: 1; */
+    /* right: 0; */
+    /* border-radius: 15%; */
+}
+
+/**************************
+MAIN
+**************************/
+
+/* main {
+    padding-top: 92.8px; 
+} */
+
+/*Breadcrumbs*/
+.breadcrumbs {
+    font-family: var(--body);
+    padding: 1em;
+}
+.breadcrumbs a {
+    color: var(--primary);
+    text-decoration: none;
+}
+
+/*Current page*/
+.page-heading {
+    font-family: var(--heading);
+    text-align: center; 
+    font-size: 4em;
+    padding: 1rem;
+    display: flex;
+    position: relative;
+    align-items: center; 
+    justify-content: center; 
+    top: 0;
+}
+.page-title {
+    color: var(--background);
+    position: absolute;
+    z-index: 1;
+}
+.page-image {
+    position: relative;
+    z-index: -1;
+}
+
+/*Sort and filter*/
+.sort-filter {
+    font-family: var(--body);
+    padding: 1em;
+    display: grid;
+    grid-template-columns: 1fr auto;
+}
+.sort select {
+    height: 2em;
+}
+/* .filter-colour, .filter-size, .filter-material {
+    display: none;
+} */
+.filter button {
+    justify-self: end; 
+}
+.filter span {
+    font-size: 2em;
+}
+.filter-panel {
+    display: none;
+    position: absolute; 
+    z-index: 9990;
+}
+.filter input[type="checkbox"] {
+    display: none;
+}
+.filter input[type="checkbox"]:checked ~ .filter-panel {
+    display: block;
+}
+.filter-panel {
+    background-color: var(--secondary);
+    width: 100vw;
+    right: 0;
+}
+.filter-panel input[type="checkbox"]:checked + label {
+    background-color: var(--primary);
+    color: var(--background);
+}
+
+
+/**********
+Products
+**********/
+.all-products {
+    padding: 1em;
+}
+.product {
+    font-family: var(--body);
+    display: grid;
+    grid-gap: .5em;
+}
+.product form {
+    display: grid;
+    grid-gap: 1em;
+}
+.prodimage-container {
+    position: relative;
+}
+/* .product-image {
+    position: relative;
+} */
+.fave-button {
+    background-color: var(--background);
+    font-size: 1.2em;
+    position: absolute;
+    z-index: 1000;
+    width: 2em;
+    height: 2em;
+    border-radius: 1.5em;
+    right: 10px;
+    bottom: 10px;
+    /* vertical-align: middle; */
+    /* line-height: 2em; */
+}
+.sale-tag {
+    background-color: var(--background);
+    font-family: var(--heading);
+    font-weight: 700;
+    position: absolute;
+    top: 1em;
+    padding: .5em;
+}
+.product-name, .product-price {
+    font-family: var(--heading);
+    font-weight: 700;
+}
+.product-price del {
+    color: var(--secondary);
+    font-weight: 500;
+}
+.product-price ins {
+    /* color: rgb(161, 1, 1); */
+    text-decoration: none;
+}
+.product ul strong {
+    font-weight: 700;
+}
+.product-size legend {
+    padding-bottom: .5em;
+}
+.product-size li {
+    list-style: none;
+    display: inline-block;
+}
+.product-size input[type="radio"] {
+    display: none;
+}
+.product-size label {
+    padding: 0 1em;
+    /* margin: 0 .5em; */
+    border: 1px solid var(--primary);
+}
+.product-size input[type="radio"]:checked + label {
+    background-color: var(--secondary);
+    color: var(--background);
+}
+
+.quantity-bar {
+    display: flex;
+    flex-direction: row;
+}
+.quantity-button {
+    background-color: var(--secondary);
+    color: var(--background);
+    border: none;
+    /* font-size: 1.5em; */
+    padding: 0 .5em;
+    height: 2em;
+    width: 2em;
+    /* position: absolute;  */
+    margin: 0;
+}
+.quantity-input {
+    height: 2em;
+    width: 2em;
+    text-align: center; 
+    /* position: absolute;  */
+    margin: 0;
+}
+
+.product-cart {
+    background-color: var(--secondary);
+    justify-self: center;
+}
+.product-cart button {
+    color: var(--background);
+    padding: .5em 1em;
+}
+
+/*Product pages*/
+.product-pages {
+    font-family: var(--heading);
+    text-align: center;
+    padding: 1em;
+}
+.product-pages p {
+    padding: 1em;
+}
+.product-pages ol, li {
+    list-style: none;
+    padding: 0;
+}
+.product-pages li{
+    display: inline-block;
+    padding: 0 .5em;
+}
+.current-page {
+    background-color: var(--primary);
+}
+.current-page a {
+    color: var(--background);
+    text-decoration: none;
+}
+.inactive-page a {
+    text-decoration: none;
+}
+
+
+/*Subscribe*/
+.subscribe {
+    background-color: var(--primary);
+    color: var(--background);
+    font-family: var(--heading);
+    text-align: center; 
+    padding: 1em;
+}
+.subscribe h3 {
+    padding: 1em;
+    font-size: 1.5em;
+}
+.subscribe-bar button {
+    color: var(--background);
+}
+
+/*Footer*/
+.top-footer {
+    background-color: var(--primary);
+    font-family: var(--heading);
+    padding: 1em;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    text-align: center;
+}
+.top-footer li {
+    padding: .25em 0;
+}
+.top-footer a  {
+    color: var(--background);
+    text-decoration: none;
+}
+.bottom-footer {
+    background-color: var(--secondary);
+    padding: 1em;
+    text-align: center; 
+}
+
+.social-media li {
+    display: inline-block;
+    padding: 0 1em;
+}
+.social-media a {
+    /* background-color: var(--background); */
+    color: var(--primary);
+    font-size: 1.2em;
+    /* padding: 1em; */
+    border-radius: 1.5em;
+}
+/* .social-media span {
+    height: .5em;
+    width: .5em;
+} */
+.copyright {
+    font-family: var(--heading);
+    padding-top: 1em;
+}
