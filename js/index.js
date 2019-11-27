@@ -51,7 +51,7 @@ const product4 = {
 function loadProducts(product) {
     return `<article class="product">
                 <header class="prodimage-container">
-                    <img src=${product.prodImage} alt="Product Image" class="product-image">
+                    <img src=img/${product.prodImage} alt="Product Image" class="product-image">
                     <button class="fave-button" type="button">
                         <span class="far fa-heart"></span>
                     </button>
