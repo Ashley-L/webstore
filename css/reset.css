@@ -196,3 +196,10 @@ button, [type="button"], [type="submit"] {
   display: block;
   clear: both;
 }
+
+button {
+  background-color: inherit;
+  border: none;
+  padding: 0;
+  display: inline-block;
+}
