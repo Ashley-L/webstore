@@ -1,5 +1,5 @@
 const product0 = {
-    prodImage: `/img/black-white-polka-dot.jpg`,
+    prodImage: `img/black-white-polka-dot.jpg`,
     prodName: `Polka Dots socks`,
     prodOriginalPrice: `$999.99`,
     prodNewPrice: `$599.99`,
@@ -9,7 +9,7 @@ const product0 = {
 };
 
 const product1 = {
-    prodImage: `/img/banana.jpg`,
+    prodImage: `img/banana.jpg`,
     prodName: `Banana socks`,
     prodOriginalPrice: `$799.99`,
     prodNewPrice: `$499.99`,
@@ -19,7 +19,7 @@ const product1 = {
 };
 
 const product2 = {
-    prodImage: `/img/blue-orange.jpg`,
+    prodImage: `img/blue-orange.jpg`,
     prodName: `Some kind of patterned socks`,
     prodOriginalPrice: `$899.99`,
     prodNewPrice: `$299.99`,
@@ -29,7 +29,7 @@ const product2 = {
 };
 
 const product3 = {
-    prodImage: `/img/orange-blue-polka-dot.jpg`,
+    prodImage: `img/orange-blue-polka-dot.jpg`,
     prodName: `Fake ladybug`,
     prodOriginalPrice: `$199.99`,
     prodNewPrice: `$50.99`,
@@ -39,7 +39,7 @@ const product3 = {
 };
 
 const product4 = {
-    prodImage: `/img/red-stripes.jpg`,
+    prodImage: `img/red-stripes.jpg`,
     prodName: `Candy cane socks`,
     prodOriginalPrice: `$499.99`,
     prodNewPrice: `$399.99`,
