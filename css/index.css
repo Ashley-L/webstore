@@ -16,9 +16,8 @@
 .topbar {
     background-color: var(--primary);
     padding: 1em;
-    z-index: 8000;
-    /* position: fixed; */
-    /* z-index: 9000; */
+    /* z-index: 8000;
+    position: fixed; */
     width: 100%;
     display: grid;
     grid-template-columns: 4fr auto 1rem;
@@ -81,18 +80,20 @@
     /* position: absolute; */
     z-index: 9999;
 }
-.menu-button-open span, .menu-button-close span {
-    color: green;
-}
 .menu-button-close {
     position: absolute; 
     z-index: 9999;
-    right: 1em;
+    right: .75em;
+    top: .5em;
+}
+.fas.fa-times {
+    color: var(--primary);
 }
 .hide-menu {
     display: none;
 }
 .menu-panel {
+    display: block;
     position: absolute;
     z-index: 9990;
     width: 100%;
@@ -110,11 +111,12 @@
     top: 0; */
 }
 .menu-items {
+    display: block;
     background-color: var(--background);
     font-family: var(--heading);
     width: 100%;
     height: 100%;
-    padding-top: 2em;
+    padding-top: 3em;
 }
 
 .menu-items li {
@@ -323,13 +325,12 @@ Products
     grid-area: img;
     position: relative;
 }
-/* .product-image {
-    position: relative;
-} */
+.product-image {
+    padding-top: 2em;
+}
 .fave-button {
     grid-area: fave;
-    /* background-color: var(--primary);
-    opacity: 70%; */
+    /* opacity: 70%; */
     font-size: 1.2em;
     /* position: absolute; */
     /* z-index: 1000; */
@@ -343,20 +344,28 @@ Products
     /* vertical-align: middle; */
     /* line-height: 2em; */
 }
-
+.fas.fa-heart {
+    font-size: 1.2em;
+}
+.unfavourited {
+    color: var(--primary);
+    opacity: 25%;
+}
 .favourited {
     color: red;
-    font-size: 1.2em;
+    opacity: 100%;
 }
 
 .sale-tag {
     background-color: var(--primary);
     color: var(--background);
+    width: 100%;
     font-family: var(--heading);
     font-weight: 700;
+    text-align: center;
     position: absolute;
-    top: 1em;
-    padding: .5em;
+    top: 0;
+    padding: .2em;
     border: 1px solid var(--primary);
 }
 .product-name, .product-price {
@@ -448,6 +457,9 @@ Products
 .product-pages li{
     display: inline-block;
     padding: 0 .5em;
+}
+.product-pages a {
+    color: var(--primary);
 }
 .current-page {
     background-color: var(--primary);

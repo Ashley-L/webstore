@@ -1,19 +1,10 @@
 //Data
-// const product0 =;
-
-// const product1 =;
-
-// const product2 =;
-
-// const product3 =;
-
-// const product4 =;
-
 
 const products = [
 { //product 0
     image: `black-white-polka-dot.jpg`,
     name: `Polka Dots socks`,
+    // fave: `0`,
     originalPrice: `$999.99`,
     newPrice: `$599.99`,
     descrip: `Fight fashion faux-pas by bringing socks and sandals back into style.`,
@@ -26,6 +17,7 @@ const products = [
 },{ //product 1
     image: `banana.jpg`,
     name: `Banana socks`,
+    // fave: `1`,
     originalPrice: `$799.99`,
     newPrice: `$499.99`,
     descrip: `We, personally, would not wear bananas on our socks, but we're sure someone might.`,
@@ -38,6 +30,7 @@ const products = [
 },{ //product 2
     image: `blue-orange.jpg`,
     name: `Abstract socks`,
+    // fave: `2`,
     originalPrice: `$899.99`,
     newPrice: `$299.99`,
     style: `Dots`,
@@ -50,6 +43,7 @@ const products = [
 },{ //product 3
     image: `orange-blue-polka-dot.jpg`,
     name: `Fake ladybug`,
+    // fave: `3`,
     originalPrice: `$199.99`,
     newPrice: `$50.99`,
     descrip: `These are some massive polka dots. It reminds us of a ladybug, except the  colours are completely wrong.`,
@@ -62,6 +56,7 @@ const products = [
 },{ //product 4
     image: `red-stripes.jpg`,
     name: `Candy cane socks`,
+    // fave: `4`,
     originalPrice: `$499.99`,
     newPrice: `$399.99`,
     descrip: `These socks are perfect for relaxing, as opposed to any other pair of socks.`,
@@ -74,6 +69,7 @@ const products = [
 },{ //product 5
     image: `red-orange.jpg`,
     name: `Strawberry orange`,
+    // fave: `5`,
     originalPrice: `$899.99`,
     newPrice: `$749.99`,
     descrip: `Delicious.`,
@@ -86,6 +82,7 @@ const products = [
 },{ //product 6
     image: `classic-dots.jpg`,
     name: `Classic Dots`,
+    // fave: `6`,
     originalPrice: `$199.99`,
     newPrice: `$99.99`,
     descrip: `Perfect for all occasions.`,
@@ -98,6 +95,7 @@ const products = [
 },{ //product 7
     image: `bunny-socks.jpg`,
     name: `Bunny socks`,
+    // fave: `7`,
     originalPrice: `$299.99`,
     newPrice: `$149.99`,
     descrip: `Stay warm by wearing rabbits on your feet.`,
@@ -110,6 +108,7 @@ const products = [
 },{ //product 8
     image: `yellow-polka-dot.jpg`,
     name: `Undercover socks`,
+    // fave: `8`,
     originalPrice: `$499.99`,
     newPrice: `$399.99`,
     descrip: `When you have an office job but still gotta look professional.`,
@@ -122,6 +121,7 @@ const products = [
 },{ //product 9
     image: `swearing.jpg`,
     name: `Um, rude`,
+    // fave: `9`,
     originalPrice: `$999.99`,
     newPrice: `$699.99`,
     descrip: `To all the people who annoy you.`,
@@ -145,8 +145,8 @@ function loadProducts(product) {
                     <p class="sale-tag">sale</p>
                 </header>
                 <h3 class="product-name">${product.name}</h3>
-                <button class="fave-button" type="button">
-                        <span class="fas fa-heart"></span>
+                <button id="faveButton" class="fave-button" type="button">
+                        <span id="faveColour" class="fas fa-heart unfavourited"></span>
                 </button>
                 <data class="product-price" value="39"><del>${product.originalPrice}</del> <ins>${product.newPrice}</ins></data>
                 <p class="product-descrip">${product.descrip}</p>
@@ -195,6 +195,32 @@ function renderProducts(arrToRender) {
 // document.getElementById('product').innerHTML = strOfHtmlroducts;
 
 renderProducts(products);
+
+
+
+// Add product to favourites
+function addToFavourites() {
+    // console.log(`click`);
+    document.getElementById(`faveColour`).classList.toggle(`favourited`); 
+}
+// document.getElementById(`faveButton`).addEventListener(`click`, addToFavourites);
+document.getElementById(`faveButton`).addEventListener(`click`, addToFavourites);
+
+
+
+
+// Toggle menu OPEN
+function toggleMenuOpen() {
+    // console.log(`click`);
+    document.getElementById(`menuPanel`).classList.toggle(`menu-panel`); 
+}
+document.getElementById(`toggleViewOpen`).addEventListener(`click`, toggleMenuOpen);
+
+// Toggle menu CLOSE
+function toggleMenuClose() {
+    document.getElementById(`menuPanel`).classList.toggle(`menu-panel`); 
+}
+document.getElementById(`toggleViewClose`).addEventListener(`click`, toggleMenuClose);
 
 
 
