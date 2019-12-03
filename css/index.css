@@ -16,6 +16,7 @@
 .topbar {
     background-color: var(--primary);
     padding: 1em;
+    z-index: 8000;
     /* position: fixed; */
     /* z-index: 9000; */
     width: 100%;
@@ -35,7 +36,7 @@
     align-self: center;
     display: grid;
     grid-template-columns: 1fr 1fr; 
-    grid-gap: 1.5em;
+    grid-gap: 1.5em; 
 }
 .topbar-icons a {
     align-items: center; 
@@ -49,7 +50,7 @@
 }
 .main-menu {
     grid-area: menu;
-    position: relative;
+    /* position: relative; */
     align-self: center; 
     justify-self: end;
 }
@@ -68,26 +69,68 @@
 
 /*Main menu CLEAN THIS UP OH MAN*/ 
 
-#toggle-open, #toggle-close {
-    position: relative;
+/* .main-menu { */
+    /* position: fixed;  */
+    /* position: relative; */
+    /* overflow: hidden;     */
+
+    /* right: 0; 
+    */
+
+.menu-button-open {
+    /* position: absolute; */
     z-index: 9999;
 }
-.main-menu input[type=checkbox] {
+.menu-button-open span, .menu-button-close span {
+    color: green;
+}
+.menu-button-close {
+    position: absolute; 
+    z-index: 9999;
+    right: 1em;
+}
+.hide-menu {
     display: none;
 }
-.main-menu #toggle-close {
-    display: none;
+.menu-panel {
+    position: absolute;
+    z-index: 9990;
+    width: 100%;
+    height: 100%;
+    left: 0;
+    top: 0;
+    overflow: hidden; 
+ 
+    
+    /* position: absolute;
+    z-index: 9999;
+    width: 100vw;
+    height: 100vh;
+    right: 0;
+    top: 0; */
 }
-.main-menu input[type=checkbox]:checked ~ #toggle-open {
-    display:none;
-}
-.main-menu input[type=checkbox]:checked ~ #toggle-close {
-    display:block;
-}
-.main-menu input[type=checkbox]:checked ~ div ul {
-    display: block;
+.menu-items {
+    background-color: var(--background);
+    font-family: var(--heading);
+    width: 100%;
+    height: 100%;
+    padding-top: 2em;
 }
 
+.menu-items li {
+    padding: 1em;
+    font-size: 1.5em;
+}
+.menu-items a {
+    color: var(--primary);
+    text-decoration: none;
+}
+
+
+
+/* .main-menu button span {
+    color: var(--background);
+}
 
 .main-menu div {
     top: 0;
@@ -97,37 +140,26 @@
 }
 
 
-.main-menu-items {
+.menu-items {
     background-color: var(--secondary);
     position: absolute; 
     z-index: 9999;
     display: none;
     padding: 0;
-    /* top: 0; */
     right: 0;
     width: 90vw;
     height: 100vh;
     overflow: hidden;
 }
-.main-menu-items li {
+.menu-items li {
     padding: 1em 0 1em 2em;
 }
-.main-menu-items a {
+.menu-items a {
     color: var(--background);
     font-family: var(--heading);
     text-decoration: none;
-}
-
-/* #toggle-open, #toggle-close {
-	position: absolute;
-	z-index: 9999;
-}
-input[type=checkbox], #toggle-close, input[type=checkbox] ~ ul,  input[type=checkbox]:checked ~ #toggle-open {
-	display: none;
-}
-input[type=checkbox]:checked ~ ul, input[type=checkbox]:checked ~ #toggle-close {
-	display: block;
 } */
+
 
 /*Search bar*/
 .bar {
@@ -234,7 +266,9 @@ MAIN
 }
 .filter-panel {
     background-color: var(--secondary);
+    color: var(--background);
     font-family: var(--heading);
+    padding-left: 1em;
     width: 100vw;
     right: 0;
 }
@@ -262,14 +296,15 @@ Products
     grid-gap: 1em;
     padding-top: 1em;
 }
-.prodimage-container {
+.image-container {
     position: relative;
 }
 /* .product-image {
     position: relative;
 } */
 .fave-button {
-    background-color: var(--background);
+    /* background-color: var(--primary);
+    opacity: 70%; */
     font-size: 1.2em;
     position: absolute;
     z-index: 1000;
@@ -282,6 +317,12 @@ Products
     /* vertical-align: middle; */
     /* line-height: 2em; */
 }
+
+.favourited {
+    color: red;
+    font-size: 1.2em;
+}
+
 .sale-tag {
     background-color: var(--primary);
     color: var(--background);
