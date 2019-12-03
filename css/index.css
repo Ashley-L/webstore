@@ -288,32 +288,58 @@ Products
 .product {
     font-family: var(--body);
     display: grid;
+    grid-template-columns: 3fr 1fr;
+    grid-template-areas: 
+    "img img"
+    "name fave"
+    "pri pri"
+    "descrip descrip"
+    "info info"
+    "buy buy";
+
     grid-gap: .5em;
     padding-bottom: 1.5em;
 }
-.product form {
+.product-name {
+    grid-area: name;
+    font-size: 1.4em;
+}
+.product-price {
+    grid-area: pri;
+}
+.product-descrip {
+    grid-area: descrip;
+}
+.product-info {
+    grid-area: info;
+}
+.product-buy {
+    grid-area: buy;
     display: grid;
     grid-gap: 1em;
     padding-top: 1em;
 }
 .image-container {
+    grid-area: img;
     position: relative;
 }
 /* .product-image {
     position: relative;
 } */
 .fave-button {
+    grid-area: fave;
     /* background-color: var(--primary);
     opacity: 70%; */
     font-size: 1.2em;
-    position: absolute;
-    z-index: 1000;
+    /* position: absolute; */
+    /* z-index: 1000; */
     width: 2em;
     height: 2em;
     border-radius: 1.5em;
     right: 10px;
     bottom: 10px;
-    border: 1px solid var(--primary);
+    justify-self: end;
+    /* border: 1px solid var(--primary); */
     /* vertical-align: middle; */
     /* line-height: 2em; */
 }

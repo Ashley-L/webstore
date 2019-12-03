@@ -37,7 +37,7 @@ const products = [
     large: `l1`,
 },{ //product 2
     image: `blue-orange.jpg`,
-    name: `Some kind of patterned socks`,
+    name: `Abstract socks`,
     originalPrice: `$899.99`,
     newPrice: `$299.99`,
     style: `Dots`,
@@ -134,7 +134,7 @@ const products = [
 } 
 ]
 
-{/* <span class="far fa-heart"></span> */}
+//<span class="far fa-heart"></span>
 
 
 //Functionality
@@ -142,20 +142,20 @@ function loadProducts(product) {
     return `<article class="product">
                 <header class="image-container">
                     <img src=img/${product.image} alt="Product Image" class="product-image">
-                    <button class="fave-button" type="button">
-                        <span class="fas fa-heart"></span>
-                    </button>
                     <p class="sale-tag">sale</p>
                 </header>
                 <h3 class="product-name">${product.name}</h3>
+                <button class="fave-button" type="button">
+                        <span class="fas fa-heart"></span>
+                </button>
                 <data class="product-price" value="39"><del>${product.originalPrice}</del> <ins>${product.newPrice}</ins></data>
-                <p>${product.descrip}</p>
-                <ul>
+                <p class="product-descrip">${product.descrip}</p>
+                <ul class="product-info">
                 <li><strong>Style: </strong>${product.style}</li> 
                 <li><strong>Material: </strong>${product.material}</li>
                 <li><strong>Availability: </strong>${product.availability}</li>
                 </ul>
-                <form>
+                <form class="product-buy">
                 <fieldset id="prodSize" class="product-size">
                     <!-- <legend>Sizes</legend> -->
                     <input type="radio" id="${product.small}" name="size" value="${product.small}"><label for="${product.small}">S</label>
@@ -178,9 +178,9 @@ function loadProducts(product) {
 }
 
 function renderProducts(arrToRender) {
-    const arrOfHtmlProducts = products.map(loadProducts);
-    const strOfHtmlroducts = arrOfHtmlProducts.join(`\n`);
-    document.getElementById('product').innerHTML = strOfHtmlroducts;
+    const arrOfHtmlProducts = arrToRender.map(loadProducts);
+    const strOfHtmlProducts = arrOfHtmlProducts.join(`\n`);
+    document.getElementById('products').innerHTML = strOfHtmlProducts;
 }
 
 //Execution
@@ -201,12 +201,12 @@ renderProducts(products);
 
 
 
-function toggleMenu() {
-    // console.log(`click`);
-    document.getElementById(`menuPanel`).classList.toggle(`menu-items`);
-}
+// function toggleMenu() {
+//     console.log(`click`);
+//     document.getElementById(`menuPanel`).classList.toggle(`menu-items`);
+// }
 
 
 // For toggle
-renderMenu(menuPanel)
-document.getElementById(`toggleView`).addEventListener(`click`, toggleMenu); //add toggleView to your button
+// renderMenu(menuPanel)
+// document.getElementById(`toggleView`).addEventListener(`click`, toggleMenu); //add toggleView to your button
