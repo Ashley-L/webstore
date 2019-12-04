@@ -94,7 +94,7 @@
 }
 .menu-panel {
     display: block;
-    position: absolute;
+    position: fixed;
     z-index: 9990;
     width: 100%;
     height: 100%;
@@ -239,6 +239,7 @@ MAIN
     padding: 1em;
     display: grid;
     grid-template-columns: 1fr auto;
+    position: relative;
 }
 .sort-filter li {
     padding: .5em 0 .5em 2em;
@@ -255,30 +256,91 @@ MAIN
 .filter span {
     font-size: 2em;
 }
-.filter-panel {
+
+
+.hide-filters {
     display: none;
+}
+.filter-panel {
+    display: block;
+    position: fixed;
+    z-index: 100;
+    width: 100%;
+    /* height: 100%; */
+    left: 0;
+    top: 0;
+    bottom: 0;
+    overflow-y: scroll
+    /* overflow: hidden;  */
+}
+.filter-items {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-template-areas: 
+    "head close"
+    "colour colour"
+    "style style"
+    "size size"
+    "material material"
+    "remove apply";
+    grid-gap: 1em;
+    background-color: var(--background);
+    font-family: var(--heading);
+    width: 100%;
+    /* height: 100%; */
+    /* padding-top: 3em;    */
+    padding: 0;
+    overflow: hidden;
+   
+    /* padding-left: 1em;
+    right: 0;
     position: absolute; 
     z-index: 9990;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    overflow: hidden; */
 }
-.filter input[type="checkbox"] {
+.filter-items li {
+    padding: 0;
+}
+.filter-heading {
+    grid-area: head;
+    font-size: 1.2em;
+}
+.filter-col {
+    grid-area: colour;
+}
+.filter-sty {
+    grid-area: style;
+}
+.filter-si {
+    grid-area: size;
+}
+.filter-mat {
+    grid-area: material;
+}
+.filter-remove {
+    grid-area: remove;
+}
+.filter-apply {
+    grid-area: apply;
+}
+
+/* .filter input[type="checkbox"] {
     display: none;
 }
-.filter input[type="checkbox"]:checked ~ .filter-panel {
-    display: block;
-}
-.filter-panel {
-    background-color: var(--secondary);
-    color: var(--background);
-    font-family: var(--heading);
-    padding-left: 1em;
-    width: 100vw;
-    right: 0;
-}
-.filter-panel input[type="checkbox"]:checked + label {
+.filter input[type="checkbox"]:checked ~ .filter-items {
+    display: block; 
+}*/
+
+/* .filter-items input[type="checkbox"]:checked + label {
     background-color: var(--primary);
     color: var(--background);
     padding: 0 1em;
-}
+} */
+
+
 
 
 /**********
@@ -403,6 +465,19 @@ Products
 .product-size input[type="radio"]:checked + label {
     background-color: var(--secondary);
     color: var(--background);
+}
+
+
+
+/*for product.descrip*/
+.stock-available {
+    color: green;
+}
+.stock-low {
+    color: rgb(230, 131, 3);
+}
+.stock-none {
+    color: red;
 }
 
 .quantity-bar {

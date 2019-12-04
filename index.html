@@ -26,7 +26,7 @@
           <!-- <button class="menu-button-close"><span class="fas fa-times"></span></button> -->
           <div id="menuPanel" class="hide-menu">
             <ul class="menu-items">
-              <li><button id="toggleViewClose" class="menu-button-close"><span class="fas fa-times"></span></button></!
+              <li><button id="toggleViewClose" class="menu-button-close"><span class="fas fa-times"></span></button>
               <li><a href="#">Men</a></li>
               <li><a href="#">Women</a></li>
               <li><a href="#">Kids</a></li>
@@ -77,51 +77,53 @@
               </select>
             </fieldset>
           </form>
-          <form class="filter">
-            <!-- <button type="button"><span class="material-icons">filter_list</span></button> -->
-            <input type="checkbox" id="filter-button" aria-label="toggle filter panel open and close">
-				    <label for="filter-button" id="open-filter"><span class="material-icons">filter_list</span></label>
+          <form id="filter" class="filter">
+            <button id="toggleFilterMenuOpen" type="button"><span class="material-icons">filter_list</span></button>
+            <!-- <input type="checkbox" id="filter-button" aria-label="toggle filter panel open and close"> -->
+				    <!-- <label for="filter-button" id="open-filter"><span class="material-icons">filter_list</span></label> -->
             <!-- <label for="filter-button" id="close-filter"><span class="material-icons">close</span></label> -->
-            <div class="filter-panel">
-              <h2>Filters</h2>
-              <!-- <button type="button"><span class="material-icons">close</span></button> -->
-              <fieldset class="filter-colour">
-                <legend>Colour</legend>
-                <ul>        
-                  <li><input type="checkbox" name="colour" value="blue" id="blue"> <label for="blue">Blue</label></li> 
-                  <li><input type="checkbox" name="colour" value="red" id="red"> <label for="red">Red</label></li>
-                  <li><input type="checkbox" name="colour" value="yellow" id="yellow"> <label for="yellow">Yellow</label></li>
-                  <li><input type="checkbox" name="colour" value="green" id="green"> <label for="green">Green</label></li>
-                  <li><input type="checkbox" name="colour" value="purple" id="purple"> <label for="purple">Purple</label></li>
-                </ul>
-              </fieldset>
-              <fieldset class="filter-style">
-                <legend>Style</legend>
-                <ul>        
-                  <li><input type="checkbox" name="style" value="dots" id="dots"> <label for="dots">Dots</label></li> 
-                  <li><input type="checkbox" name="style" value="stripes" id="stripes"> <label for="stripes">Stripes</label></li>
-                  <li><input type="checkbox" name="style" value="pattern" id="pattern"> <label for="pattern">Pattern</label></li>
-                  <li><input type="checkbox" name="style" value="specialty" id="specialty"> <label for="specialty">Specialty</label></li>
-                </ul>
-              </fieldset>
-              <fieldset class="filter-size">
-                <legend>Sizes</legend>
-                <ul>
-                  <li><input type="checkbox" name="size" value="sm" id="sm"> <label for="sm">S</label></li>
-                  <li><input type="checkbox" name="size" value="md" id="md"> <label for="md">M</label></li>
-                  <li><input type="checkbox" name="size" value="lg" id="lg"> <label for="lg">L</label></li>
-                </ul>
-              </fieldset>
-              <fieldset class="filter-material">
-                <legend>Material</legend>
-                <ul>
-                  <li><input type="checkbox" name="material" value="cotton" id="cotton"> <label for="cotton">Cotton</label></li>
-                  <li><input type="checkbox" name="material" value="polyester" id="polyester"> <label for="polyester">Polyester</label></li>
-                  <li><input type="checkbox" name="material" value="wool" id="wool"> <label for="wool">Wool</label></li>
-                </ul>
-              </fieldset>
-              <button>Remove filters</button>
-              <button>Apply filters</button>
+            <div id="filterPanel" class="hide-filters">
+              <ul class="filter-items">
+                <li class="filter-heading"><h2>Filters</h2></li>
+                <li id="toggleFilterMenuClose" class="filter-close"><button type="button"><span class="fas fa-times"></span></button></li>
+                <li class="filter-col"><fieldset class="filter-colour">
+                  <legend>Colour</legend>
+                  <ul>        
+                    <li><input type="checkbox" name="colour" value="blue" id="blue"> <label for="blue">Blue</label></li> 
+                    <li><input type="checkbox" name="colour" value="red" id="red"> <label for="red">Red</label></li>
+                    <li><input type="checkbox" name="colour" value="yellow" id="yellow"> <label for="yellow">Yellow</label></li>
+                    <li><input type="checkbox" name="colour" value="green" id="green"> <label for="green">Green</label></li>
+                    <li><input type="checkbox" name="colour" value="purple" id="purple"> <label for="purple">Purple</label></li>
+                  </ul>
+                </fieldset></li>
+                <li class="filter-sty"><fieldset class="filter-style">
+                  <legend>Style</legend>
+                  <ul>        
+                    <li><input type="checkbox" name="style" value="dots" id="dots"> <label for="dots">Dots</label></li> 
+                    <li><input type="checkbox" name="style" value="stripes" id="stripes"> <label for="stripes">Stripes</label></li>
+                    <li><input type="checkbox" name="style" value="pattern" id="pattern"> <label for="pattern">Pattern</label></li>
+                    <li><input type="checkbox" name="style" value="specialty" id="specialty"> <label for="specialty">Specialty</label></li>
+                  </ul>
+                </fieldset></li>
+                <li class="filter-size"><fieldset class="filter-size">
+                  <legend>Sizes</legend>
+                  <ul>
+                    <li><input type="checkbox" name="size" value="sm" id="sm"> <label for="sm">S</label></li>
+                    <li><input type="checkbox" name="size" value="md" id="md"> <label for="md">M</label></li>
+                    <li><input type="checkbox" name="size" value="lg" id="lg"> <label for="lg">L</label></li>
+                  </ul>
+                </fieldset></li>
+                <li class="filter-mat"><fieldset class="filter-material">
+                  <legend>Material</legend>
+                  <ul>
+                    <li><input type="checkbox" name="material" value="cotton" id="cotton"> <label for="cotton">Cotton</label></li>
+                    <li><input type="checkbox" name="material" value="polyester" id="polyester"> <label for="polyester">Polyester</label></li>
+                    <li><input type="checkbox" name="material" value="wool" id="wool"> <label for="wool">Wool</label></li>
+                  </ul>
+                </fieldset></li>
+                <li class="filter-remove"><button>Remove filters</button></li>
+                <li class="filter-apply"><button>Apply filters</button></li>
+              </ul>
             </div>
           </form>
         </div>
@@ -143,7 +145,7 @@
           <p id="prodDescrip">Here is a shot of this product that might entice a user to click and add it to their cart.</p>
           <ul>
             <li id="prodMaterial"><strong>Material: </strong>Cotton</li>
-            <li id="prodAvailability"><strong>Availability: </strong>In stock</li>
+            <li id="prodAvailability"><strong>Availability: </strong><em class="stock-available">In stock</em></li>
           </ul>
           <form>
             <fieldset id="prodSize" class="product-size">

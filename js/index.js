@@ -145,15 +145,15 @@ function loadProducts(product) {
                     <p class="sale-tag">sale</p>
                 </header>
                 <h3 class="product-name">${product.name}</h3>
-                <button id="faveButton" class="fave-button" type="button">
-                        <span id="faveColour" class="fas fa-heart unfavourited"></span>
+                <button id="faveButton" class="fave-button" type="button"> <!-- id="faveButton" -->
+                        <span id="faveColour" class="fas fa-heart unfavourited"></span> <!-- id="faveColour" -->
                 </button>
                 <data class="product-price" value="39"><del>${product.originalPrice}</del> <ins>${product.newPrice}</ins></data>
                 <p class="product-descrip">${product.descrip}</p>
                 <ul class="product-info">
                 <li><strong>Style: </strong>${product.style}</li> 
                 <li><strong>Material: </strong>${product.material}</li>
-                <li><strong>Availability: </strong>${product.availability}</li>
+                <li><strong>Availability: </strong><em>${product.availability}</em></li>
                 </ul>
                 <form class="product-buy">
                 <fieldset id="prodSize" class="product-size">
@@ -198,13 +198,7 @@ renderProducts(products);
 
 
 
-// Add product to favourites
-function addToFavourites() {
-    // console.log(`click`);
-    document.getElementById(`faveColour`).classList.toggle(`favourited`); 
-}
-// document.getElementById(`faveButton`).addEventListener(`click`, addToFavourites);
-document.getElementById(`faveButton`).addEventListener(`click`, addToFavourites);
+
 
 
 
@@ -223,6 +217,35 @@ function toggleMenuClose() {
 document.getElementById(`toggleViewClose`).addEventListener(`click`, toggleMenuClose);
 
 
+
+// Toggle filters OPEN
+function toggleFiltersOpen() {
+    // console.log(`click`);
+    document.getElementById(`filterPanel`).classList.toggle(`filter-panel`); 
+}
+document.getElementById(`toggleFilterMenuOpen`).addEventListener(`click`, toggleFiltersOpen);
+
+// Toggle filters CLOSE
+function toggleFiltersClose() {
+    document.getElementById(`filterPanel`).classList.toggle(`filter-panel`); 
+}
+document.getElementById(`toggleFilterMenuClose`).addEventListener(`click`, toggleFiltersClose);
+
+
+// Add product to favourites
+// function addToFavourites() {
+//     console.log(`click`);
+//     document.getElementsByClassName(`fave-colour`).classList.toggle(`favourited`); 
+// }
+// document.getElementsByClassName(`fave-button`).addEventListener(`click`, addToFavourites);
+
+
+// add to favourites but with ID
+function addToFavourites() {
+    document.getElementById(`faveColour`).classList.toggle(`favourited`);
+}
+document.getElementById(`faveButton`).addEventListener(`click`, addToFavourites);
+//NEED TO PUT IDS BACK IN THE HTML
 
 
 
