@@ -4,9 +4,9 @@ const products = [
 { //product 0
     image: `black-white-polka-dot.jpg`,
     name: `Polka Dots socks`,
-    // fave: `0`,
-    originalPrice: `$999.99`,
-    newPrice: `$599.99`,
+    buttonId: `faveButton0`,
+    originalPrice: 999.99,
+    newPrice: 599.99,
     descrip: `Fight fashion faux-pas by bringing socks and sandals back into style.`,
     style: `Dots`,
     material: `Cotton`,
@@ -17,9 +17,9 @@ const products = [
 },{ //product 1
     image: `banana.jpg`,
     name: `Banana socks`,
-    // fave: `1`,
-    originalPrice: `$799.99`,
-    newPrice: `$499.99`,
+    buttonId: `faveButton1`,
+    originalPrice: 799.99,
+    newPrice: 499.99,
     descrip: `We, personally, would not wear bananas on our socks, but we're sure someone might.`,
     style: `Pattern`,
     material: `Polyester`,
@@ -30,9 +30,9 @@ const products = [
 },{ //product 2
     image: `blue-orange.jpg`,
     name: `Abstract socks`,
-    // fave: `2`,
-    originalPrice: `$899.99`,
-    newPrice: `$299.99`,
+    buttonId: `faveButton2`,
+    originalPrice: 899.99,
+    newPrice: 299.99,
     style: `Dots`,
     descrip: `These socks are so great that you'll still look good even if you're only wearing one of them.`,
     material: `Wool`,
@@ -43,9 +43,9 @@ const products = [
 },{ //product 3
     image: `orange-blue-polka-dot.jpg`,
     name: `Fake ladybug`,
-    // fave: `3`,
-    originalPrice: `$199.99`,
-    newPrice: `$50.99`,
+    buttonId: `faveButton3`,
+    originalPrice: 199.99,
+    newPrice: 50.99,
     descrip: `These are some massive polka dots. It reminds us of a ladybug, except the  colours are completely wrong.`,
     style: `Dots`,
     material: `Polyester`,
@@ -56,9 +56,9 @@ const products = [
 },{ //product 4
     image: `red-stripes.jpg`,
     name: `Candy cane socks`,
-    // fave: `4`,
-    originalPrice: `$499.99`,
-    newPrice: `$399.99`,
+    buttonId: `faveButton4`,
+    originalPrice: 499.99,
+    newPrice: 399.99,
     descrip: `These socks are perfect for relaxing, as opposed to any other pair of socks.`,
     style: `Stripes`,
     material: `Cotton`,
@@ -69,9 +69,9 @@ const products = [
 },{ //product 5
     image: `red-orange.jpg`,
     name: `Strawberry orange`,
-    // fave: `5`,
-    originalPrice: `$899.99`,
-    newPrice: `$749.99`,
+    buttonId: `faveButton5`,
+    originalPrice: 899.99,
+    newPrice: 749.99,
     descrip: `Delicious.`,
     style: `Stripes`,
     material: `Polyester`,
@@ -82,9 +82,9 @@ const products = [
 },{ //product 6
     image: `classic-dots.jpg`,
     name: `Classic Dots`,
-    // fave: `6`,
-    originalPrice: `$199.99`,
-    newPrice: `$99.99`,
+    buttonId: `faveButton6`,
+    originalPrice: 199.99,
+    newPrice: 99.99,
     descrip: `Perfect for all occasions.`,
     style: `Dots`,
     material: `Wool`,
@@ -95,9 +95,9 @@ const products = [
 },{ //product 7
     image: `bunny-socks.jpg`,
     name: `Bunny socks`,
-    // fave: `7`,
-    originalPrice: `$299.99`,
-    newPrice: `$149.99`,
+    buttonId: `faveButton7`,
+    originalPrice: 299.99,
+    newPrice: 149.99,
     descrip: `Stay warm by wearing rabbits on your feet.`,
     style: `Specialty`,
     material: `Wool`,
@@ -108,9 +108,9 @@ const products = [
 },{ //product 8
     image: `yellow-polka-dot.jpg`,
     name: `Undercover socks`,
-    // fave: `8`,
-    originalPrice: `$499.99`,
-    newPrice: `$399.99`,
+    buttonId: `faveButton8`,
+    originalPrice: 499.99,
+    newPrice: 399.99,
     descrip: `When you have an office job but still gotta look professional.`,
     style: `Dots`,
     material: `Cotton`,
@@ -121,9 +121,9 @@ const products = [
 },{ //product 9
     image: `swearing.jpg`,
     name: `Um, rude`,
-    // fave: `9`,
-    originalPrice: `$999.99`,
-    newPrice: `$699.99`,
+    buttonId: `faveButton9`,
+    originalPrice: 999.99,
+    newPrice: 699.99,
     descrip: `To all the people who annoy you.`,
     style: `Specialty`,
     material: `Polyester`,
@@ -131,7 +131,137 @@ const products = [
     small: `s9`,
     medium: `m9`,
     large: `l9`,
-} 
+},{ //product 10
+    image: `striped-hearts.jpg`,
+    name: `Striped hearts`,
+    buttonId: `faveButton10`,
+    originalPrice: 799.99,
+    newPrice: 599.99,
+    descrip: `When you can't decide between stripes or hearts.`,
+    style: `Specialty`,
+    material: `Cotton`,
+    availability: `In stock`,
+    small: `s10`,
+    medium: `m10`,
+    large: `l10`,
+},{ //product 11
+    image: `foot-glove.jpg`,
+    name: `Foot glove`,
+    buttonId: `faveButton11`,
+    originalPrice: 1249.99,
+    newPrice: 999.99,
+    descrip: `Sometimes you want gloves, but for your feet.`,
+    style: `Specialty`,
+    material: `Cotton`,
+    availability: `Low stock`,
+    small: `s11`,
+    medium: `m11`,
+    large: `l11`,
+},{ //product 12
+    image: `girls-rule.jpg`,
+    name: `Girls rule`,
+    buttonId: `faveButton12`,
+    originalPrice: 699.99,
+    newPrice: 549.99,
+    descrip: `Fight the patriarchy with your socks.`,
+    style: `Specialty`,
+    material: `Polyester`,
+    availability: `In stock`,
+    small: `s12`,
+    medium: `m12`,
+    large: `l12`,
+},{ //product 13
+    image: `doughnuts.jpg`,
+    name: `Doughnuts`,
+    buttonId: `faveButton13`,
+    originalPrice: 199.99,
+    newPrice: 29.99,
+    descrip: `We love doughnuts, and these socks.`,
+    style: `Pattern`,
+    material: `Polyester`,
+    availability: `Out of stock`,
+    small: `s13`,
+    medium: `m13`,
+    large: `l13`,
+},{ //product 14
+    image: `tall-vine.jpg`,
+    name: `Weird stockings`,
+    buttonId: `faveButton14`,
+    originalPrice: 129.99,
+    newPrice: 119.99,
+    descrip: `Stay warm with these extra long socks.`,
+    style: `Specialty`,
+    material: `Wool`,
+    availability: `In stock`,
+    small: `s14`,
+    medium: `m14`,
+    large: `l14`,
+},{ //product 15
+    image: `fuzzy-colourful.jpg`,
+    name: `Rainbow`,
+    buttonId: `faveButton15`,
+    originalPrice: 1199.99,
+    newPrice: 1099.99,
+    descrip: `Extra warm, extra fuzzy, extra colourful.`,
+    style: `Specialty`,
+    material: `Wool`,
+    availability: `Out of stock`,
+    small: `s15`,
+    medium: `m15`,
+    large: `l15`,
+},{ //product 16
+    image: `abstract.jpg`,
+    name: `Abstract`,
+    buttonId: `faveButton16`,
+    originalPrice: 499.99,
+    newPrice: 379.99,
+    descrip: `Show your artsy side with these strangely-patterned socks.`,
+    style: `Pattern`,
+    material: `Cotton`,
+    availability: `Low stock`,
+    small: `s16`,
+    medium: `m16`,
+    large: `l16`,
+},{ //product 17
+    image: `cassettes.jpg`,
+    name: `Blast from the past`,
+    buttonId: `faveButton17`,
+    originalPrice: 849.99,
+    newPrice: 749.99,
+    descrip: `Go back to uh whenever cassettes were popular with these socks.`,
+    style: `Pattern`,
+    material: `Polyester`,
+    availability: `Out of stock`,
+    small: `s17`,
+    medium: `m17`,
+    large: `l17`,
+},{ //product 18
+    image: `colourful-dots.jpg`,
+    name: `Colourful dots`,
+    buttonId: `faveButton18`,
+    originalPrice: 19.99,
+    newPrice: 18.99,
+    descrip: `Brighten up your office with these socks.`,
+    style: `Dots`,
+    material: `Cotton`,
+    availability: `In stock`,
+    small: `s18`,
+    medium: `m18`,
+    large: `l18`,
+},{ //product 19
+    image: `cactus.jpg`,
+    name: `Cactus cowboy`,
+    buttonId: `faveButton19`,
+    originalPrice: 749.99,
+    newPrice: 699.99,
+    descrip: `Unleash your inner cowboy.`,
+    style: `Pattern`,
+    material: `Polyester`,
+    availability: `Low stock`,
+    small: `s19`,
+    medium: `m19`,
+    large: `l19`,
+}
 ]
 
 //<span class="far fa-heart"></span>
@@ -139,16 +269,19 @@ const products = [
 
 //Functionality
 function loadProducts(product) {
+
+     
+
     return `<article class="product">
                 <header class="image-container">
                     <img src=img/${product.image} alt="Product Image" class="product-image">
                     <p class="sale-tag">sale</p>
                 </header>
                 <h3 class="product-name">${product.name}</h3>
-                <button id="faveButton" class="fave-button" type="button"> <!-- id="faveButton" -->
+                <button id="${product.buttonId}" class="fave-button" type="button"> <!-- id="faveButton" -->
                         <span id="faveColour" class="fas fa-heart unfavourited"></span> <!-- id="faveColour" -->
                 </button>
-                <data class="product-price" value="39"><del>${product.originalPrice}</del> <ins>${product.newPrice}</ins></data>
+                <data class="product-price" value="39"><del>$${product.originalPrice}</del> <ins>$${product.newPrice}</ins></data>
                 <p class="product-descrip">${product.descrip}</p>
                 <ul class="product-info">
                 <li><strong>Style: </strong>${product.style}</li> 
@@ -244,7 +377,7 @@ document.getElementById(`toggleFilterMenuClose`).addEventListener(`click`, toggl
 function addToFavourites() {
     document.getElementById(`faveColour`).classList.toggle(`favourited`);
 }
-document.getElementById(`faveButton`).addEventListener(`click`, addToFavourites);
+document.getElementById(`${buttonId}`).addEventListener(`click`, addToFavourites);
 //NEED TO PUT IDS BACK IN THE HTML
 
 
