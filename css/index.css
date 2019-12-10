@@ -474,15 +474,20 @@ Products
 
 
 
-/*for product.descrip*/
+/*for product.availability*/
+.stock-tag {
+    color: var(--background);
+    opacity: .5;
+    padding: 0 1em;
+}
 .stock-available {
-    color: green;
+    background-color: green;
 }
 .stock-low {
-    color: rgb(230, 131, 3);
+    background-color: rgb(230, 131, 3);
 }
 .stock-none {
-    color: red;
+    background-color: red;
 }
 
 .quantity-bar {
