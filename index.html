@@ -70,7 +70,7 @@
             <fieldset>
               <!-- <label for="sort">Sort</label> -->
               <select name="sort" id="sort">
-                <option selected="selected">Sort</option>
+                <option selected="selected" value="sort">Sort</option>
                 <option value="price-high">Price, highest to lowest</option>
                 <option value="price-low">Price, lowest to highest</option>
                 <option value="newest">Newest releases</option>
@@ -78,15 +78,39 @@
             </fieldset>
           </form>
           <form id="filter" class="filter">
-            <button id="toggleFilterMenuOpen" type="button"><span class="material-icons">filter_list</span></button>
+            <!-- <button id="toggleFilterMenuOpen" type="button"><span class="material-icons">filter_list</span></button> -->
             <!-- <input type="checkbox" id="filter-button" aria-label="toggle filter panel open and close"> -->
 				    <!-- <label for="filter-button" id="open-filter"><span class="material-icons">filter_list</span></label> -->
             <!-- <label for="filter-button" id="close-filter"><span class="material-icons">close</span></label> -->
-            <div id="filterPanel" class="hide-filters">
-              <ul class="filter-items">
-                <li class="filter-heading"><h2>Filters</h2></li>
-                <li id="toggleFilterMenuClose" class="filter-close"><button type="button"><span class="fas fa-times"></span></button></li>
-                <li class="filter-col"><fieldset class="filter-colour">
+            <h2 class="filter-heading">Filters</h2>
+            <select name="Style" id="filterStyle">
+              <option selected="selected" value="style">Style</option>
+              <option value="dots">Dots</option>
+              <option value="stripes">Stripes</option>
+              <option value="pattern">Value</option>
+              <option value="specialty">Specialty</option>
+            </select>
+
+            <select name="Material" id="filterMaterial">
+              <option selected="material" value="material">Material</option>
+              <option value="cotton">Cotton</option>
+              <option value="polyester">Polyester</option>
+              <option value="wool">Wool</option>
+            </select>
+
+            <select name="Availability" id="filterAvailability">
+              <option selected="availability" value="availability">Availability</option>
+              <option value="instock">In stock</option>
+              <option value="lowstock">Low stock</option>
+              <option value="outofstock">Out of stock</option>
+            </select>
+
+
+            <!-- <div id="filterPanel" class="hide-filters"> -->
+              <!-- <ul class="filter-items"> -->
+                <!-- <li class="filter-heading"><h2>Filters</h2></li> -->
+                <!-- <li id="toggleFilterMenuClose" class="filter-close"><button type="button"><span class="fas fa-times"></span></button></li> -->
+                <!-- <li class="filter-col"><fieldset class="filter-colour">
                   <legend>Colour</legend>
                   <ul>        
                     <li><input type="radio" name="colour" value="blue" id="blue"> <label for="blue">Blue</label></li> 
@@ -95,36 +119,36 @@
                     <li><input type="radio" name="colour" value="green" id="green"> <label for="green">Green</label></li>
                     <li><input type="radio" name="colour" value="purple" id="purple"> <label for="purple">Purple</label></li>
                   </ul>
-                </fieldset></li>
-                <li class="filter-sty"><fieldset class="filter-style">
+                </fieldset></li> -->
+                <!-- <li class="filter-style"><fieldset class="filter-style-items">
                   <legend>Style</legend>
-                  <ul>        
-                    <li><input type="radio" name="style" value="dots" id="dots"> <label for="dots">Dots</label></li> 
-                    <li><input type="radio" name="style" value="stripes" id="stripes"> <label for="stripes">Stripes</label></li>
-                    <li><input type="radio" name="style" value="pattern" id="pattern"> <label for="pattern">Pattern</label></li>
-                    <li><input type="radio" name="style" value="specialty" id="specialty"> <label for="specialty">Specialty</label></li>
+                  <ul id="filterStyle">        
+                    <li><input type="radio" name="style" value="dots" id="filterStyle0"> <label for="dots">Dots</label></li> 
+                    <li><input type="radio" name="style" value="stripes" id="filterStyle1"> <label for="stripes">Stripes</label></li>
+                    <li><input type="radio" name="style" value="pattern" id="filterStyle2"> <label for="pattern">Pattern</label></li>
+                    <li><input type="radio" name="style" value="specialty" id="filterStyle3"> <label for="specialty">Specialty</label></li>
                   </ul>
-                </fieldset></li>
-                <li class="filter-size"><fieldset class="filter-size">
+                </fieldset></li> -->
+                <!-- <li class="filter-size"><fieldset class="filter-size">
                   <legend>Sizes</legend>
                   <ul>
                     <li><input type="radio" name="size" value="sm" id="sm"> <label for="sm">S</label></li>
                     <li><input type="radio" name="size" value="md" id="md"> <label for="md">M</label></li>
                     <li><input type="radio" name="size" value="lg" id="lg"> <label for="lg">L</label></li>
                   </ul>
-                </fieldset></li>
-                <li class="filter-mat"><fieldset class="filter-material">
+                </fieldset></li> -->
+                <!-- <li class="filter-material"><fieldset class="filter-material-items">
                   <legend>Material</legend>
-                  <ul>
-                    <li><input type="radio" name="material" value="cotton" id="cotton"> <label for="cotton">Cotton</label></li>
-                    <li><input type="radio" name="material" value="polyester" id="polyester"> <label for="polyester">Polyester</label></li>
-                    <li><input type="radio" name="material" value="wool" id="wool"> <label for="wool">Wool</label></li>
+                  <ul id="filterMaterial">
+                    <li><input type="radio" name="material" value="cotton" id="filterCotton"> <label for="cotton">Cotton</label></li>
+                    <li><input type="radio" name="material" value="polyester" id="filterPolyester"> <label for="polyester">Polyester</label></li>
+                    <li><input type="radio" name="material" value="wool" id="filterWool"> <label for="wool">Wool</label></li>
                   </ul>
-                </fieldset></li>
-                <li class="filter-panel-btn filter-remove"><button>Remove filters</button></li>
-                <li class="filter-panel-btn filter-apply"><button>Apply filters</button></li>
-              </ul>
-            </div>
+                </fieldset></li> -->
+                <!-- <li class="filter-panel-btn filter-remove"><button>Remove filters</button></li> -->
+                <!-- <li class="filter-panel-btn filter-apply"><button>Apply filters</button></li> -->
+              <!-- </ul> -->
+            <!-- </div> -->
           </form>
         </div>
 

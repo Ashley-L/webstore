@@ -130,38 +130,6 @@
 
 
 
-/* .main-menu button span {
-    color: var(--background);
-}
-
-.main-menu div {
-    top: 0;
-    display: flex;
-    align-items: center;
-    justify-content: center; 
-}
-
-
-.menu-items {
-    background-color: var(--secondary);
-    position: absolute; 
-    z-index: 9999;
-    display: none;
-    padding: 0;
-    right: 0;
-    width: 90vw;
-    height: 100vh;
-    overflow: hidden;
-}
-.menu-items li {
-    padding: 1em 0 1em 2em;
-}
-.menu-items a {
-    color: var(--background);
-    font-family: var(--heading);
-    text-decoration: none;
-} */
-
 
 /*Search bar*/
 .bar {
@@ -184,26 +152,16 @@
     position: relative;
     text-align: center; 
     padding: 0 1em;
-    /* align-self: center;  */
-
-    /* padding: 0 .5em .5em 0; */
-    /* position: absolute; */
-    /* z-index: 1; */
-    /* right: 0; */
-    /* border-radius: 15%; */
 }
 
 /**************************
 MAIN
 **************************/
 
-/* main {
-    padding-top: 92.8px; 
-} */
 
 /*Breadcrumbs*/
 .breadcrumbs {
-    font-family: var(--body);
+    font-family: var(--heading);
     padding: 0 1em;
 }
 .breadcrumbs a {
@@ -238,70 +196,101 @@ MAIN
     font-family: var(--body);
     padding: 1em;
     display: grid;
-    grid-template-columns: 1fr auto;
+    /* grid-template-columns: 1fr auto; */
     position: relative;
+    grid-gap: 1em;
+    width: 100%;
 }
 .sort-filter li {
     padding: .5em 0 .5em 2em;
 }
-.sort select {
+.sort-filter select{
+    width: 100%;
     height: 2em;
 }
+
+.filter {
+    display: grid;
+    grid-gap: .5em;
+}
+.filter-heading {
+    font-family: var(--heading);
+    font-weight: 500;
+}
+
+/* .filter-items {
+    display: grid;
+    grid-template-columns: 1fr 1fr; 
+    grid-template-areas:
+    "head head"
+    "mat sty";
+    grid-gap: 1em;
+    padding-top: 1em;
+}
+.filter-heading {
+    grid-area: head;
+    font-family: var(--heading);
+    font-weight: 500;
+}
+.filter-items li {
+    padding: 0;
+}
+.filter-items legend {
+    font-family: var(--heading);
+}
+.filter-items fieldset ul {
+    padding-left: 1em;
+}
+.filter-items input {
+    border: 1px sold var(--primary);
+} */
+
+
+
+
+
 /* .filter-colour, .filter-size, .filter-material {
     display: none;
 } */
-.filter button {
+/* .filter button {
     justify-self: end; 
 }
 .filter span {
     font-size: 2em;
-}
+} */
 
 
-.hide-filters {
+/* .hide-filters {
     display: none;
-}
-.filter-panel {
+} */
+/* .filter-panel {
     display: block;
     position: fixed;
     z-index: 100;
     width: 100%;
-    /* height: 100%; */
     left: 0;
     top: 0;
     bottom: 0;
     overflow-y: scroll
-    /* overflow: hidden;  */
-}
-.filter-items {
+} */
+/* .filter-items {
     display: grid;
     grid-template-columns: 1fr 1fr;
+    grid-template-rows: 2em 8em 6em 2em; 
     grid-template-areas: 
     "head close"
-    "colour colour"
     "style style"
-    "size size"
     "material material"
     "remove apply";
     grid-gap: 1em;
     background-color: var(--background);
     font-family: var(--heading);
     width: 100%;
-    /* height: 100%; */
-    /* padding-top: 3em;    */
+    height: 100%;
     padding: 2em;
     overflow: hidden;
-   
-    /* padding-left: 1em;
-    right: 0;
-    position: absolute; 
-    z-index: 9990;
-    top: 0;
-    width: 100%;
-    height: 100%;
-    overflow: hidden; */
-}
-.filter-items li {
+} */
+/* .filter-items li {
     padding: 0;
 }
 .filter-close {
@@ -312,21 +301,16 @@ MAIN
     grid-area: head;
     font-size: 1.2em;
 }
-.filter-col {
-    grid-area: colour;
-}
+
 .filter-sty {
     grid-area: style;
 }
-.filter-si {
-    grid-area: size;
-}
 .filter-mat {
     grid-area: material;
-}
-.filter-remove {
+} */
+/* .filter-remove {
     grid-area: remove;
-    /* border: 2px solid var(--secondary); */
+    border: 2px solid var(--secondary);
 }
 .filter-apply {
     grid-area: apply;
@@ -337,14 +321,13 @@ MAIN
 }
 .filter-panel-btn  {
     text-align: center; 
-    margin: 0 auto;  
     width: 100%;
-
 }
 .filter-panel-btn button {
     align-self: center; 
-
-}
+    height: 100%;
+    width: 100%;
+} */
 
 
 

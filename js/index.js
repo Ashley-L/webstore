@@ -254,7 +254,7 @@ const products = [
     buttonId: `faveButton19`,
     originalPrice: 749.99,
     newPrice: 699.99,
-    descrip: `Unleash your inner cowboy.`,
+    descrip: `Yeehaw.`,
     style: `Pattern`,
     material: `Polyester`,
     availability: `Low stock`,
@@ -352,19 +352,26 @@ document.getElementById(`toggleViewClose`).addEventListener(`click`, toggleMenuC
 
 
 // Toggle filters OPEN
-function toggleFiltersOpen() {
-    // console.log(`click`);
-    document.getElementById(`filterPanel`).classList.toggle(`filter-panel`); 
-}
-document.getElementById(`toggleFilterMenuOpen`).addEventListener(`click`, toggleFiltersOpen);
+// function toggleFiltersOpen() {
+//     // console.log(`click`);
+//     document.getElementById(`filterPanel`).classList.toggle(`filter-panel`); 
+// }
+// document.getElementById(`toggleFilterMenuOpen`).addEventListener(`click`, toggleFiltersOpen);
 
 // Toggle filters CLOSE
-function toggleFiltersClose() {
-    document.getElementById(`filterPanel`).classList.toggle(`filter-panel`); 
+// function toggleFiltersClose() {
+//     document.getElementById(`filterPanel`).classList.toggle(`filter-panel`); 
+// }
+// document.getElementById(`toggleFilterMenuClose`).addEventListener(`click`, toggleFiltersClose);
+
+
+
+// add to favourites but with ID
+function addToFavourites() {
+    document.getElementById(`faveColour`).classList.toggle(`favourited`);
 }
-document.getElementById(`toggleFilterMenuClose`).addEventListener(`click`, toggleFiltersClose);
-
-
+document.getElementById(`${product.buttonId}`).addEventListener(`click`, addToFavourites);
+//NEED TO PUT IDS BACK IN THE HTML
 // Add product to favourites
 // function addToFavourites() {
 //     console.log(`click`);
@@ -373,12 +380,15 @@ document.getElementById(`toggleFilterMenuClose`).addEventListener(`click`, toggl
 // document.getElementsByClassName(`fave-button`).addEventListener(`click`, addToFavourites);
 
 
-// add to favourites but with ID
-function addToFavourites() {
-    document.getElementById(`faveColour`).classList.toggle(`favourited`);
-}
-document.getElementById(`${buttonId}`).addEventListener(`click`, addToFavourites);
-//NEED TO PUT IDS BACK IN THE HTML
+
+
+
+
+
+
+
+
+
 
 
 
