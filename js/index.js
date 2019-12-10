@@ -302,6 +302,16 @@ function isAFilterAvailability (product) {
     }
 }
 
+//Search products 
+function isMatchingName(product) {
+    if (product.name.toUpperCase().includes(this.trim().toUpperCase())) {
+      return true;
+    } else {
+      return false;
+    }
+  }
+
+
 function loadProducts(product) {
 
 //Product availability coloured classes
@@ -432,6 +442,13 @@ function showFilteredAvailability (event) {
 
 
 
+function showSearchedProducts(event) {
+    const searchedProduct = event.target.value; 
+    renderProducts(products.filter(isMatchingName, searchedProduct));
+  }
+
+
+
 // add to favourites but with ID
 function addToFavourites() {
     document.getElementById(`faveColour`).classList.toggle(`favourited`);
@@ -456,7 +473,7 @@ document.getElementById('filterMaterial').addEventListener('change', showFiltere
 
 document.getElementById('filterAvailability').addEventListener('change', showFilteredAvailability);
 
-
+document.getElementById('searchProducts').addEventListener('input', showSearchedProducts);
 
 
 
