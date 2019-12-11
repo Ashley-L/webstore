@@ -3,8 +3,9 @@
 const products = [
 { //product 0
     image: `black-white-polka-dot.jpg`,
+    saleType: `clearance`,
     name: `Polka Dots socks`,
-    // buttonId: `faveButton0`,
+    // faveButton: `faveButton0`,
     originalPrice: 999.99,
     newPrice: 599.99,
     descrip: `Fight fashion faux-pas by bringing socks and sandals back into style.`,
@@ -17,7 +18,8 @@ const products = [
 },{ //product 1
     image: `banana.jpg`,
     name: `Banana socks`,
-    // buttonId: `faveButton1`,
+    saleType: `clearance`,
+    // faveButton: `faveButton1`,
     originalPrice: 799.99,
     newPrice: 499.99,
     descrip: `We, personally, would not wear bananas on our socks, but we're sure someone might.`,
@@ -30,7 +32,8 @@ const products = [
 },{ //product 2
     image: `blue-orange.jpg`,
     name: `Abstract socks`,
-    // buttonId: `faveButton2`,
+    saleType: `clearance`,
+    // faveButton: `faveButton2`,
     originalPrice: 899.99,
     newPrice: 299.99,
     style: `pattern`,
@@ -43,7 +46,8 @@ const products = [
 },{ //product 3
     image: `orange-blue-polka-dot.jpg`,
     name: `Fake ladybug`,
-    // buttonId: `faveButton3`,
+    saleType: `sale`,
+    // faveButton: `faveButton3`,
     originalPrice: 199.99,
     newPrice: 50.99,
     descrip: `These are some massive polka dots. It reminds us of a ladybug, except the  colours are completely wrong.`,
@@ -56,7 +60,8 @@ const products = [
 },{ //product 4
     image: `red-stripes.jpg`,
     name: `Candy cane socks`,
-    // buttonId: `faveButton4`,
+    saleType: `sale`,
+    // faveButton: `faveButton4`,
     originalPrice: 499.99,
     newPrice: 399.99,
     descrip: `These socks are perfect for relaxing, as opposed to any other pair of socks.`,
@@ -69,7 +74,8 @@ const products = [
 },{ //product 5
     image: `red-orange.jpg`,
     name: `Strawberry orange`,
-    // buttonId: `faveButton5`,
+    saleType: `sale`,
+    // faveButton: `faveButton5`,
     originalPrice: 899.99,
     newPrice: 749.99,
     descrip: `Delicious.`,
@@ -82,7 +88,8 @@ const products = [
 },{ //product 6
     image: `classic-dots.jpg`,
     name: `Classic Dots`,
-    // buttonId: `faveButton6`,
+    saleType: `sale`,
+    // faveButton: `faveButton6`,
     originalPrice: 199.99,
     newPrice: 99.99,
     descrip: `Perfect for all occasions.`,
@@ -95,7 +102,8 @@ const products = [
 },{ //product 7
     image: `bunny-socks.jpg`,
     name: `Bunny socks`,
-    // buttonId: `faveButton7`,
+    saleType: `sale`,
+    // faveButton: `faveButton7`,
     originalPrice: 299.99,
     newPrice: 149.99,
     descrip: `Stay warm by wearing rabbits on your feet.`,
@@ -108,7 +116,8 @@ const products = [
 },{ //product 8
     image: `yellow-polka-dot.jpg`,
     name: `Undercover socks`,
-    // buttonId: `faveButton8`,
+    saleType: `sale`,
+    // faveButton: `faveButton8`,
     originalPrice: 499.99,
     newPrice: 399.99,
     descrip: `When you have an office job but still gotta look professional.`,
@@ -121,7 +130,8 @@ const products = [
 },{ //product 9
     image: `swearing.jpg`,
     name: `Um, rude`,
-    // buttonId: `faveButton9`,
+    saleType: `sale`,
+    // faveButton: `faveButton9`,
     originalPrice: 999.99,
     newPrice: 699.99,
     descrip: `To all the people who annoy you.`,
@@ -134,7 +144,8 @@ const products = [
 },{ //product 10
     image: `striped-hearts.jpg`,
     name: `Striped hearts`,
-    // buttonId: `faveButton10`,
+    saleType: `clearance`,
+    // faveButton: `faveButton10`,
     originalPrice: 799.99,
     newPrice: 599.99,
     descrip: `When you can't decide between stripes or hearts.`,
@@ -147,7 +158,8 @@ const products = [
 },{ //product 11
     image: `foot-glove.jpg`,
     name: `Foot glove`,
-    // buttonId: `faveButton11`,
+    saleType: `clearance`,
+    // faveButton: `faveButton11`,
     originalPrice: 1249.99,
     newPrice: 999.99,
     descrip: `Sometimes you want gloves, but for your feet.`,
@@ -160,7 +172,8 @@ const products = [
 },{ //product 12
     image: `girls-rule.jpg`,
     name: `Girls rule`,
-    // buttonId: `faveButton12`,
+    saleType: `sale`,
+    // faveButton: `faveButton12`,
     originalPrice: 699.99,
     newPrice: 549.99,
     descrip: `Fight the patriarchy with your socks.`,
@@ -173,7 +186,8 @@ const products = [
 },{ //product 13
     image: `doughnuts.jpg`,
     name: `Doughnuts`,
-    // buttonId: `faveButton13`,
+    saleType: `clearance`,
+    // faveButton: `faveButton13`,
     originalPrice: 199.99,
     newPrice: 29.99,
     descrip: `We love doughnuts, and these socks.`,
@@ -186,7 +200,8 @@ const products = [
 },{ //product 14
     image: `tall-vine.jpg`,
     name: `Weird stockings`,
-    // buttonId: `faveButton14`,
+    saleType: `sale`,
+    // faveButton: `faveButton14`,
     originalPrice: 129.99,
     newPrice: 119.99,
     descrip: `Stay warm with these extra long socks.`,
@@ -199,7 +214,8 @@ const products = [
 },{ //product 15
     image: `fuzzy-colourful.jpg`,
     name: `Rainbow`,
-    // buttonId: `faveButton15`,
+    saleType: `sale`,
+    // faveButton: `faveButton15`,
     originalPrice: 1199.99,
     newPrice: 1099.99,
     descrip: `Extra warm, extra fuzzy, extra colourful.`,
@@ -212,6 +228,7 @@ const products = [
 },{ //product 16
     image: `abstract.jpg`,
     name: `Abstract`,
+    saleType: `sale`,
     // buttonId: `faveButton16`,
     originalPrice: 499.99,
     newPrice: 379.99,
@@ -225,7 +242,8 @@ const products = [
 },{ //product 17
     image: `cassettes.jpg`,
     name: `Blast from the past`,
-    // buttonId: `faveButton17`,
+    saleType: `sale`,
+    // faveButton: `faveButton17`,
     originalPrice: 849.99,
     newPrice: 749.99,
     descrip: `Go back to uh whenever cassettes were popular with these socks.`,
@@ -238,7 +256,8 @@ const products = [
 },{ //product 18
     image: `colourful-dots.jpg`,
     name: `Colourful dots`,
-    // buttonId: `faveButton18`,
+    saleType: `sale`,
+    // faveButton: `faveButton18`,
     originalPrice: 19.99,
     newPrice: 18.99,
     descrip: `Brighten up your office with these socks.`,
@@ -251,7 +270,8 @@ const products = [
 },{ //product 19
     image: `cactus.jpg`,
     name: `Cactus cowboy`,
-    // buttonId: `faveButton19`,
+    saleType: `sale`,
+    // faveButton: `faveButton19`,
     originalPrice: 749.99,
     newPrice: 699.99,
     descrip: `Yeehaw.`,
@@ -262,12 +282,69 @@ const products = [
     medium: `m19`,
     large: `l19`,
 }
-]
+];
 
-//<span class="far fa-heart"></span>
+// var faveButton = [
+// {   
+//     buttonID: `faveButton0`,
+// },{
+//     buttonID: `faveButton1`,
+// },{
+//     buttonID: `faveButton2`,
+// },{
+//     buttonID: `faveButton3`,
+// },{
+//     buttonID: `faveButton4`,
+// },{
+//     buttonID: `faveButton5`,
+// },{
+//     buttonID: `faveButton6`,
+// },{
+//     buttonID: `faveButton7`,
+// },{
+//     buttonID: `faveButton8`,
+// },{
+//     buttonID: `faveButton9`,
+// },{
+//     buttonID: `faveButton10`,
+// },{
+//     buttonID: `faveButton11`,
+// },{
+//     buttonID:  `faveButton12`,
+// },{
+//     buttonID: `faveButton13`,
+// },{
+//     buttonID: `faveButton14`,
+// },{
+//     buttonID: `faveButton15`,
+// },{
+//     buttonID: `faveButton16`,
+// },{
+//     buttonID: `faveButton17`,
+// },{
+//     buttonID: `faveButton18`,
+// },{
+//     buttonID: `faveButton19`
+// }   
+// ];
+
+
+
 
 
 //Functionality
+
+//Sort
+function isASortOption(product) {
+    if (this == 'saleType') {
+        return true;
+    } else if (product.saleType == this) {
+        return true;
+    } else {
+        return false;
+    }
+}
+
 
 //Filter style
 function isAFilterStyle (product) {
@@ -326,17 +403,28 @@ if (product.availability == `in stock`) {
 }
 
 
+//type of sale 
+let saletagClass;
+
+if (product.saleType == `sale`) {
+    saletagClass = `class="sale-tag sale-normal"`;
+} else {
+    saletagClass = `class="sale-tag sale-clearance"`;
+}
+
+
+//faveButton
 
      
 
     return `<article class="product">
                 <header class="image-container">
                     <img src=img/${product.image} alt="Product Image" class="product-image">
-                    <p class="sale-tag">sale</p>
+                    <p ${saletagClass}>${product.saleType}</p>
                 </header>
                 <h3 class="product-name">${product.name}</h3>
                 <button id="faveButton" class="fave-button" type="button"> <!-- id="faveButton" -->
-                        <span id="faveColour" class="fas fa-heart unfavourited"></span> <!-- id="faveColour" -->
+                        <span id="faveColour" class="fave-colour fas fa-heart unfavourited"></span> <!-- id="faveColour" -->
                 </button>
                 <data class="product-price" value="39"><del>$${product.originalPrice}</del> <ins>$${product.newPrice}</ins></data>
                 <p class="product-descrip">${product.descrip}</p>
@@ -367,6 +455,7 @@ if (product.availability == `in stock`) {
             </article>`;
 }
 
+//map
 function renderProducts(arrToRender) {
     const arrOfHtmlProducts = arrToRender.map(loadProducts);
     const strOfHtmlProducts = arrOfHtmlProducts.join(`\n`);
@@ -374,20 +463,8 @@ function renderProducts(arrToRender) {
 }
 
 //Execution
-// document.getElementById('product').innerHTML = loadProducts(products[0])
-// document.getElementById('product').innerHTML += loadProducts(products[1])
-// document.getElementById('product').innerHTML += loadProducts(products[2])
-// document.getElementById('product').innerHTML += loadProducts(products[3])
-// document.getElementById('product').innerHTML += loadProducts(products[4])
-
-// const arrOfHtmlProducts = products.map(loadProducts);
-// const strOfHtmlroducts = arrOfHtmlProducts.join(`\n`);
-// document.getElementById('product').innerHTML = strOfHtmlroducts;
 
 renderProducts(products);
-
-
-
 
 
 
@@ -398,62 +475,59 @@ function toggleMenuOpen() {
     // console.log(`click`);
     document.getElementById(`menuPanel`).classList.toggle(`menu-panel`); 
 }
-document.getElementById(`toggleViewOpen`).addEventListener(`click`, toggleMenuOpen);
 
 // Toggle menu CLOSE
 function toggleMenuClose() {
     document.getElementById(`menuPanel`).classList.toggle(`menu-panel`); 
 }
-document.getElementById(`toggleViewClose`).addEventListener(`click`, toggleMenuClose);
 
 
 
+//SORT
+function showSales (event) {
+    const selectedSale = event.target.value;
+    renderProducts(products.filter(isASortOption,selectedSale));
+}
 
 
 //FILTERS
 
+//Filter style
 function showFilteredStyles (event) {
     const selectedFilterStyle = event.target.value;
     renderProducts(products.filter(isAFilterStyle, selectedFilterStyle));
 }
 
+//Filter material
 function showFilteredMaterials (event) {
     const selectedFilterMaterial = event.target.value;
     renderProducts(products.filter(isAFilterMaterial, selectedFilterMaterial));
 }
 
+//Filter availability
 function showFilteredAvailability (event) {
     const selectedFilterAvailability = event.target.value;
     renderProducts(products.filter(isAFilterAvailability, selectedFilterAvailability));
 }
 
-// Toggle filters OPEN
-// function toggleFiltersOpen() {
-//     // console.log(`click`);
-//     document.getElementById(`filterPanel`).classList.toggle(`filter-panel`); 
-// }
-// document.getElementById(`toggleFilterMenuOpen`).addEventListener(`click`, toggleFiltersOpen);
-
-// Toggle filters CLOSE
-// function toggleFiltersClose() {
-//     document.getElementById(`filterPanel`).classList.toggle(`filter-panel`); 
-// }
-// document.getElementById(`toggleFilterMenuClose`).addEventListener(`click`, toggleFiltersClose);
-
-
-
+//Search products
 function showSearchedProducts(event) {
     const searchedProduct = event.target.value; 
     renderProducts(products.filter(isMatchingName, searchedProduct));
   }
 
-
-
 // add to favourites but with ID
-function addToFavourites() {
+function addToFavourites(){
+    // console.log(`click`);
     document.getElementById(`faveColour`).classList.toggle(`favourited`);
 }
-document.getElementById(`faveButton`).addEventListener(`click`, addToFavourites);
+// document.getElementbyId(`faveButton`).addEventListener(`click`, addToFavourites);
+
+// function addToFavourites() {
+//     document.getElementbyId(`faveColour`).classList.toggle(`favourited`);
+// }
+
+
 //NEED TO PUT IDS BACK IN THE HTML
 // Add product to favourites
 // function addToFavourites() {
@@ -465,25 +539,34 @@ document.getElementById(`faveButton`).addEventListener(`click`, addToFavourites)
 
 
 
+//Toggle
+document.getElementById(`toggleViewOpen`).addEventListener(`click`, toggleMenuOpen);
+
+document.getElementById(`toggleViewClose`).addEventListener(`click`, toggleMenuClose);
 
 
+//Sort
+document.getElementById('sort').addEventListener('change', showSales);
+
+
+//Filtering
 document.getElementById('filterStyle').addEventListener('change', showFilteredStyles);
 
 document.getElementById('filterMaterial').addEventListener('change', showFilteredMaterials);
 
 document.getElementById('filterAvailability').addEventListener('change', showFilteredAvailability);
 
+
+
+
+//Search
 document.getElementById('searchProducts').addEventListener('input', showSearchedProducts);
 
 
 
 
-// function toggleMenu() {
-//     console.log(`click`);
-//     document.getElementById(`menuPanel`).classList.toggle(`menu-items`);
-// }
+//Favourites
+document.getElementById(`faveButton`).addEventListener(`click`, addToFavourites);
 
 
-// For toggle
-// renderMenu(menuPanel)
-// document.getElementById(`toggleView`).addEventListener(`click`, toggleMenu); //add toggleView to your button
+
