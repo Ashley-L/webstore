@@ -20,7 +20,7 @@
     position: fixed;
     width: 100%;
     display: grid;
-    grid-template-columns: 4fr auto 1rem;
+    grid-template-columns: 4fr auto 1.3rem;
     grid-template-areas:
     "logo ico menu"
     "search search search";
@@ -83,6 +83,13 @@ main {
     /* position: absolute; */
     z-index: 9999;
 }
+.fas.fa-bars {
+    position: fixed;
+    z-index: 9999;
+    color: var(--background);
+    right: 1em;
+    top: 1.1em;
+}
 .menu-button-close {
     position: absolute; 
     z-index: 9999;
@@ -95,7 +102,7 @@ main {
 .hide-menu {
     display: none;
 }
-.menu-panel {
+.menu-panel { /*toggling menu open and close*/
     display: block;
     position: fixed;
     z-index: 9990;

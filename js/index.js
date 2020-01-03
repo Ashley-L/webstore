@@ -284,49 +284,6 @@ const products = [
 }
 ];
 
-// var faveButton = [
-// {   
-//     buttonID: `faveButton0`,
-// },{
-//     buttonID: `faveButton1`,
-// },{
-//     buttonID: `faveButton2`,
-// },{
-//     buttonID: `faveButton3`,
-// },{
-//     buttonID: `faveButton4`,
-// },{
-//     buttonID: `faveButton5`,
-// },{
-//     buttonID: `faveButton6`,
-// },{
-//     buttonID: `faveButton7`,
-// },{
-//     buttonID: `faveButton8`,
-// },{
-//     buttonID: `faveButton9`,
-// },{
-//     buttonID: `faveButton10`,
-// },{
-//     buttonID: `faveButton11`,
-// },{
-//     buttonID:  `faveButton12`,
-// },{
-//     buttonID: `faveButton13`,
-// },{
-//     buttonID: `faveButton14`,
-// },{
-//     buttonID: `faveButton15`,
-// },{
-//     buttonID: `faveButton16`,
-// },{
-//     buttonID: `faveButton17`,
-// },{
-//     buttonID: `faveButton18`,
-// },{
-//     buttonID: `faveButton19`
-// }   
-// ];
 
 
 
@@ -471,17 +428,36 @@ renderProducts(products);
 
 
 // Toggle menu OPEN
+// function toggleMenu () {
+//     document.getElementById().
+// }
+
+
+
+//Open and close the menu
 function toggleMenuOpen() {
     // console.log(`click`);
     document.getElementById(`menuPanel`).classList.toggle(`menu-panel`); 
 }
-//document.getElementById(`toggleViewOpen`).addEventListener(`click`, toggleMenuOpen);
+//Open and close the menu
+document.getElementById(`toggleViewOpen`).addEventListener(`click`, toggleMenuOpen);
 
 
-// Toggle menu CLOSE
-function toggleMenuClose() {
-    document.getElementById(`menuPanel`).classList.toggle(`menu-panel`); 
+//Change the menu icon when you open and close
+function toggleMenuIcon() {
+    document.getElementById(`menuIcon`).classList.toggle(`fa-times`);
 }
+//Change the menu icon when you open and close
+document.getElementById(`menuIcon`).addEventListener(`click`, toggleMenuIcon);
+
+
+
+
+
+
+
+
+
 
 
 //SORT
@@ -588,9 +564,6 @@ document.getElementById(`labelDropdown3`).addEventListener(`click`, toggleFtrDro
 //EXECUTABLES
 
 //Toggle
-document.getElementById(`toggleViewOpen`).addEventListener(`click`, toggleMenuOpen);
-
-document.getElementById(`toggleViewClose`).addEventListener(`click`, toggleMenuClose);
 
 
 //Sort
