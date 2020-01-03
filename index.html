@@ -9,7 +9,7 @@
     <link rel="stylesheet" href="css/reset.css"> <!-- You may change this "Reset" to "Normalize" if preferred -->
     <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
     <link rel="stylesheet" href="css/index.css">
-    <script src="https://kit.fontawesome.com/25f3d204fe.js"></script>
+    <script src="https://kit.fontawesome.com/25f3d204fe.js" crossorigin="anonymous"></script>
   </head>
   <body>
     <header class="topbar">
@@ -18,7 +18,7 @@
       
       <ul class="topbar-icons">
         <li><a href="#" aria-label="user profile"><span class="fas fa-user-circle"></span></a></li>
-        <li><a href="#" aria-label="shopping cart"><span class="fas fa-shopping-cart"></span></a></li>
+        <li><a href="#" aria-label="shopping bag"><span class="fas fa-shopping-bag"></span></a></li>
       </ul>
       <!-- Navigation menu and toggle button (non-functional) -->
       <nav class="main-menu" aria-label="Primary">
@@ -222,16 +222,57 @@
     <footer>
       <nav class="footer" aria-label="footer-nav">
         <div class="top-footer">
-          <ul class="quick-links">
-            <li><a href="#">Find a store</a></li>
-            <li><a href="#">Contact</a></li>
-            <li><a href="#">About</a></li>
-          </ul>
-          <ul class="legal">
-            <li><a href="#">Terms of Use</a></li>
-            <li><a href="#">Privacy Policy</a></li>
-            <li><a href="#">Accessibility Policy</a></li>
-          </ul>
+          <div class="footer-dropdown quick">
+              <div id="labelDropdown0" class="footer-dropdown-label">
+                <h2>Quick links</h2>
+                <span id="ftrDropdownIcon0" class="fas fa-plus-circle"></span>
+                <!-- <span class="material-icons">search</span> -->
+              </div>
+              <ul id="listDropdown0" class="footer-dropdown-close">
+                <li><a href="#">Contact</a></li>
+                <li><a href="#">My account</a></li>
+                <li><a href="#">Find a store</a></li>
+                <li><a href="#">Frequently asked questions</a></li>
+              </ul>
+            </div>
+            <div class="footer-dropdown shop">
+                <div id="labelDropdown1" class="footer-dropdown-label">
+                  <h2>Shop</h2>
+                  <span id="ftrDropdownIcon1" class="fas fa-plus-circle"></span>
+                </div>
+                <ul id="listDropdown1" class="footer-dropdown-close">
+                  <li><a href="#">Men</a></li>
+                  <li><a href="#">Women</a></li>
+                  <li><a href="#">Kids</a></li>
+                  <li><a href="#">Collection</a></li>
+                  <li><a href="#">Sale</a></li>
+                </ul>
+              </div>
+          <div class="footer-dropdown corporate">
+            <div id="labelDropdown2" class="footer-dropdown-label">
+              <h2>Corporate</h2>
+              <span id="ftrDropdownIcon2" class="fas fa-plus-circle"></span>
+            </div>
+            <ul id="listDropdown2" class="footer-dropdown-close">
+              <li><a href="#">About</a></li>
+              <li><a href="#">Affiliates</a></li>
+              <li><a href="#">Sustainability</a></li>
+              <li><a href="#">Careers</a></li> 
+            </ul>
+          </div>
+          <div class="footer-dropdown legal">
+            <div id="labelDropdown3" class="footer-dropdown-label">
+              <h2>Legal</h2>
+              <span id="ftrDropdownIcon3" class="fas fa-plus-circle"></span>
+            </div>
+            <ul id="listDropdown3" class="footer-dropdown-close">
+              <li><a href="#">Terms of Use</a></li>
+              <li><a href="#">Privacy policy</a></li>
+              <li><a href="#">Accessibility policy</a></li>
+              <li><a href="#">Site map</a></li>
+            </ul>
+          </div>
+
         </div>
         <div class="bottom-footer">
           <ul class="social-media">

@@ -475,12 +475,13 @@ function toggleMenuOpen() {
     // console.log(`click`);
     document.getElementById(`menuPanel`).classList.toggle(`menu-panel`); 
 }
+//document.getElementById(`toggleViewOpen`).addEventListener(`click`, toggleMenuOpen);
+
 
 // Toggle menu CLOSE
 function toggleMenuClose() {
     document.getElementById(`menuPanel`).classList.toggle(`menu-panel`); 
 }
-
 
 
 //SORT
@@ -510,13 +511,13 @@ function showFilteredAvailability (event) {
     renderProducts(products.filter(isAFilterAvailability, selectedFilterAvailability));
 }
 
-//Search products
+//SEARCH products
 function showSearchedProducts(event) {
     const searchedProduct = event.target.value; 
     renderProducts(products.filter(isMatchingName, searchedProduct));
   }
 
-// add to favourites but with ID
+//ADD TO FAVOURITES but with ID
 function addToFavourites(){
     // console.log(`click`);
     document.getElementById(`faveColour`).classList.toggle(`favourited`);
@@ -537,7 +538,54 @@ function addToFavourites(){
 // document.getElementsByClassName(`fave-button`).addEventListener(`click`, addToFavourites);
 
 
+//FOOTER DROPDOWNS
 
+//Changing footer dropdown open/close icon
+function changeFtrDropdownIcon0 () {
+    document.getElementById(`ftrDropdownIcon0`).classList.toggle(`fa-times-circle`);
+} 
+function changeFtrDropdownIcon1 () {
+    document.getElementById(`ftrDropdownIcon1`).classList.toggle(`fa-times-circle`);
+} 
+function changeFtrDropdownIcon2 () {
+    document.getElementById(`ftrDropdownIcon2`).classList.toggle(`fa-times-circle`);
+} 
+function changeFtrDropdownIcon3 () {
+    document.getElementById(`ftrDropdownIcon3`).classList.toggle(`fa-times-circle`);
+} 
+
+//changing footer dropdown open/close icon
+document.getElementById(`labelDropdown0`).addEventListener(`click`, changeFtrDropdownIcon0); 
+document.getElementById(`labelDropdown1`).addEventListener(`click`, changeFtrDropdownIcon1); 
+document.getElementById(`labelDropdown2`).addEventListener(`click`, changeFtrDropdownIcon2); 
+document.getElementById(`labelDropdown3`).addEventListener(`click`, changeFtrDropdownIcon3); 
+
+
+
+
+
+//opening footer dropdown 
+function toggleFtrDropdown0() {
+    document.getElementById(`listDropdown0`).classList.toggle(`footer-dropdown-open`);
+}
+function toggleFtrDropdown1() {
+    document.getElementById(`listDropdown1`).classList.toggle(`footer-dropdown-open`);
+}
+function toggleFtrDropdown2() {
+    document.getElementById(`listDropdown2`).classList.toggle(`footer-dropdown-open`);
+}
+function toggleFtrDropdown3() {
+    document.getElementById(`listDropdown3`).classList.toggle(`footer-dropdown-open`);
+}
+
+//opening footer dropdown
+document.getElementById(`labelDropdown0`).addEventListener(`click`, toggleFtrDropdown0);
+document.getElementById(`labelDropdown1`).addEventListener(`click`, toggleFtrDropdown1);
+document.getElementById(`labelDropdown2`).addEventListener(`click`, toggleFtrDropdown2);
+document.getElementById(`labelDropdown3`).addEventListener(`click`, toggleFtrDropdown3);
+
+
+//EXECUTABLES
 
 //Toggle
 document.getElementById(`toggleViewOpen`).addEventListener(`click`, toggleMenuOpen);
@@ -569,4 +617,4 @@ document.getElementById('searchProducts').addEventListener('input', showSearched
 document.getElementById(`faveButton`).addEventListener(`click`, addToFavourites);
 
 
-
+//Footer dropdowns
